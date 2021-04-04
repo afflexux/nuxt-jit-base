@@ -1,27 +1,19 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">prettier-plugin</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="container flex flex-col">
+    <h1
+      class="py-8 text-transparent font-mono text-5xl font-black tracking-wide bg-gradient-to-r bg-clip-text from-blue-500 to-green-300 uppercase"
+    >
+      Gone Shopping
+    </h1>
+    <!-- <img src="~/assets/images/gleb-albovsky-a-0Qsar9rBg-unsplash.jpg" alt="" /> -->
+    <nuxt-img
+      provider="cloudinary"
+      src="v1590172498/Unsplash/Medium/Blog/tzk--R_JYS4PbQM-unsplash.jpg"
+      width="640"
+      height="480"
+      fit="coverLimit"
+      :modifiers="{ rotate: 'ignore', effect: 'cartoonify:20:80' }"
+    />
   </div>
 </template>
 
@@ -42,27 +34,5 @@ export default {}
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

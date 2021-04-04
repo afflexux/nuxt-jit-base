@@ -1,6 +1,10 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  // JIT
+  tailwindcss: {
+    jit: true,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,6 +35,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,4 +49,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  // Module oprtions
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/afflexux/image/upload/',
+    },
+  },
 }
